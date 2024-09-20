@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+body {
+  margin: 0;
+  overflow: auto; /* Permite a rolagem */
+  background-color: #000000; /* Cor de fundo */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 10px 20px;
+  background-color: #141414;
+  border-bottom: 2px solid #333;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-bottom: -50px; /*adicionei isso aqui*/
+  height: 80px;
+  transform: scale(4); /*e adicionei isso aqui tmb*/
+}
+
+.nav {
+  padding: 10px;
+  display: flex;
+  justify-content: left;
+  gap: 17px;
+}
+
+.nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav a:hover {
+  background-position: 100% 0;
+  color: rgb(139, 139, 139);
+  background-clip: text;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-icon {
+  height: 30px;
+  border-radius: 20%;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #000000;
+  }
+  25% {
+    background-color: #2d0000;
+  }
+  50% {
+    background-color: #000025;
+  }
+  75% {
+    background-color: #2d002d;
+  }
+  100% {
+    background-color: #000000;
+  }
+}
+
+#color-changing-body {
+  animation: colorChange 10s infinite;
+}
+
+@media (max-width: 768px) {
+  .movie-box-grid {
+    grid-template-columns: 1fr 1fr; /* 2 colunas em telas menores */
+  }
+}
+
+footer hr {
+  margin-top: 500px; /* Mantido para que o footer fique mais distante do conteúdo */
+}
+
+h1 {
+  color: #6f6f6f;
+  /*
+
+  color: red;
+  text-align: center;
+  margin-top: 140px;
+  font-size: 6rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 0.5rem;
+  text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 0, 0),
+    0 0 0.2em rgb(0, 0, 0);
+  animation: descerSubir 2s ease-in-out infinite;
+  */
+}
+.logo-box1 {
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.logomnkflx {
+  text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 0, 0),
+    0 0 0.2em rgb(0, 0, 0);
+  animation: descerSubir 2s ease-in-out infinite;
+  font-size: 3rem; /* Ajusta o tamanho da fonte se necessário */
+}
+
+@keyframes descerSubir {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px); /* Desce 10px */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.movie-box {
+  width: 275px;
+  height: 400px;
+  color: aliceblue;
+  transition: background-color 0.5s, transform 0.5s;
+  position: relative; /* Necessário para o posicionamento do texto */
+  overflow: hidden; /* Esconde o conteúdo que exceder os limites */
+}
+
+.movie-box:hover {
+  transform: scale(1.1);
+}
+
+.movie-box-grid {
+  margin-top: -10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+  border-radius: 1rem;
+}
+
+.movie-box img {
+  border-radius: 1rem;
+  max-width: 100%;
+  width: 100%;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.movie-box:hover img {
+  border-radius: 1rem;
+}
+
+.rating {
+  position: absolute;
+  top: 10px; /* Distância do topo */
+  right: 10px; /* Distância da direita */
+  background: rgba(255, 0, 0, 0.7); /* Fundo semitransparente */
+  color: white; /* Cor do texto */
+  padding: 5px 10px; /* Espaçamento */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 1rem; /* Tamanho da fonte */
+}
+.ratinglivre {
+  position: absolute;
+  top: 10px; /* Distância do topo */
+  right: 10px; /* Distância da direita */
+  background: rgba(2, 135, 2, 0.7); /* Fundo semitransparente */
+  color: white; /* Cor do texto */
+  padding: 5px 10px; /* Espaçamento */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 1rem; /* Tamanho da fonte */
+}
+.rating14 {
+  position: absolute;
+  top: 10px; /* Distância do topo */
+  right: 10px; /* Distância da direita */
+  background: rgba(255, 251, 0, 0.7); /* Fundo semitransparente */
+  color: white; /* Cor do texto */
+  padding: 5px 10px; /* Espaçamento */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 1rem; /* Tamanho da fonte */
+}
+.rating18 {
+  position: absolute;
+  top: 10px; /* Distância do topo */
+  right: 10px; /* Distância da direita */
+  background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+  color: white; /* Cor do texto */
+  padding: 5px 10px; /* Espaçamento */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 1rem; /* Tamanho da fonte */
+}
+.movie-description {
+  position: absolute;
+  bottom: 0; /* Posiciona na parte inferior */
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+  color: white; /* Cor do texto */
+  padding: 10px; /* Espaçamento */
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 0.3s; /* Transição suave */
+}
+
+.movie-box:hover .movie-description {
+  opacity: 1; /* Torna visível ao passar o mouse */
+}
+
+.imagem-chuva {
+  position: absolute;
+  width: 50px; /* Largura da imagem */
+  animation: cair linear infinite; /* Animação */
+  opacity: 0.8; /* Opacidade das imagens */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta a posição */
+}
+
+@keyframes cair {
+  0% {
+    transform: translateY(-100px); /* Começa acima da tela */
+  }
+  100% {
+    transform: translateY(58vh); /* Cai até o final da tela */
+  }
+}
+.assistir-btn {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.assistir-btn:hover {
+  background-color: #cc0000;
+}
+.monkey-run-container {
+  position: fixed; /* Fixa a posição do macaquinho na tela */
+  bottom: 0; /* Posição do macaquinho no fundo da página */
+  left: -200px; /* Começa fora da tela */
+  z-index: 1000; /* Fica acima de outros elementos */
+}
+
+.monkey-running {
+  width: 150px; /* Tamanho do macaquinho */
+  animation: correr 5s linear infinite; /* Animação de correr */
+}
+
+@keyframes correr {
+  0% {
+    transform: translateX(0); /* Começa à esquerda */
+  }
+  100% {
+    transform: translateX(100vw); /* Termina à direita */
+  }
+}

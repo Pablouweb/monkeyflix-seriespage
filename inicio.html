@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuva de Imagens</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <script>
+    const quantidade = 10; // Número de imagens
+    const imagens = ['./banana.png', './banana.png', './banana.png']; // Substitua pelos caminhos das suas imagens
+
+    for (let i = 0; i < quantidade; i++) {
+      const img = document.createElement('img');
+      img.src = imagens[Math.floor(Math.random() * imagens.length)]; // Seleciona uma imagem aleatória
+      img.className = 'imagem-chuva';
+
+      // Define a posição inicial aleatória
+      const randomLeft = Math.random() * 100; // Posição horizontal aleatória
+      img.style.left = randomLeft + 'vw'; // Posição horizontal aleatória
+
+      img.style.animationDuration = (Math.random() * 3 + 4) + 's'; // Duração aleatória entre 4s e 7s
+
+      document.body.appendChild(img);
+    }
+  </script>
+
+  <header class="header">
+    <div class="container">
+      <img src="./logo.png" alt="Logo" class="logo">
+      <nav class="nav">
+        <a href="#">Início</a>
+        <a href="#">Séries</a>
+        <a href="#">Filmes</a>
+        <a href="#">Mais Recentes</a>
+      </nav>
+      <div class="profile">
+        <img src="./perfil.jpg" alt="Perfil" class="profile-icon">
+      </div>
+    </div>
+  </header>
+
+
+  <div class="logo-box1">
+    <img src="./logo.png" alt="logomonkeyflix" class="logomnkflx">
+  </div>
+
+  <div class="movie-box-grid">
+    <div class="movie-box">
+      <img src="./Brooklyn 99.png" alt="Brooklyn 99">
+      <div class="rating">16+</div>
+      <div class="movie-description">
+        <h3>Monkey 99</h3>
+        <p>Uma equipe de macacos detetives resolve casos de banana desaparecida.</p>
+        <button class="assistir-btn">Assistir</button>
+      </div>
+    </div>
+    <div class="movie-box">
+      <img src="./Chucky.png" alt="Chucky">
+      <div class="rating18">18+</div>
+      <div class="movie-description">
+        <h3>Macaco Chucky</h3>
+        <p>Um boneco possuído se transforma em um macaco vingativo, sempre em busca de bananas.</p>
+        <button class="assistir-btn">Assistir</button>
+      </div>
+    </div>
+    <div class="movie-box">
+      <img src="./Evangelion.png" alt="Evangelion">
+      <div class="rating14">14+</div>
+      <div class="movie-description">
+        <h3>Evangelion: Macaco</h3>
+        <p>Macacos pilham robôs gigantes para proteger a floresta da ameaça dos humanos.</p>
+        <button class="assistir-btn">Assistir</button>
+      </div>
+    </div>
+    <div class="movie-box">
+      <img src="./Harry Potter.png" alt="Harry Potter">
+      <div class="rating">16+</div>
+      <div class="movie-description">
+        <h3>Harry Macaco</h3>
+        <p>Um jovem macaco descobre que é um bruxo e vai para uma escola mágica cheia de bananas!</p>
+        <button class="assistir-btn">Assistir</button>
+      </div>
+    </div>
+    <div class="movie-box">
+      <img src="./Spider Man.png" alt="Spider Man">
+      <div class="ratinglivre">L</div>
+      <div class="movie-description">
+        <h3>Macaco-Aranha</h3>
+        <p>Um macaco ganha poderes de aranha e luta contra vilões em busca de suas amadas bananas.</p>
+        <button class="assistir-btn">Assistir</button>
+      </div>
+    </div>
+    <div class="movie-box">
+      <img src="./Teen Wolf.png" alt="Teen Wolf">
+      <div class="rating18">18+</div>
+      <div class="movie-description">
+        <h3>Teen Macaco</h3>
+        <p>Um adolescente se transforma em um macaco e tem que lidar com a vida escolar e a sua nova pelagem!</p>
+        <button class="assistir-btn">Assistir</button>
+      </div>
+    </div>
+    <div class="movie-box">
+      <img src="./Velozes E Furiosos.png" alt="Velozes e Furiosos">
+      <div class="rating18">18+</div>
+      <div class="movie-description">
+        <h3>Velozes e Furiosos: Macacos em Ação</h3>
+        <p>Macacos corredores competem por bananas em corridas insanas e cheias de adrenalina!</p>
+        <button class="assistir-btn">Assistir</button>
+      </div>
+    </div>
+    <div class="movie-box">
+      <img src="./BayWatch.png" alt="Macaco Voador">
+      <div class="rating">16+</div>
+      <div class="movie-description">
+        <h3>Monkey Patrol</h3>
+        <p>Uma equipe de macacos salva-vidas que enfrenta perigos na praia com muita ação, bananas e acrobacias em câmera lenta.</p>
+        <button class="assistir-btn">Assistir</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="textboxaftermovies"></div>
+
+  <div class="monkey-run-container">
+    <img src="./macacopulando.gif" alt="Macaquinho Correndo" class="monkey-running">
+  </div>
+
+
+
+  <footer>
+    <hr>
+  </footer>
+</body>
+
+</html>
